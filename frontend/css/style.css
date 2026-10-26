@@ -1,0 +1,105 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #1778bc;
+    margin-top: 16px;
+}
+
+header {
+    position: sticky;
+    top: 0;
+    background-color: #1778bc;
+    z-index: 10;
+}
+
+nav {
+    padding: 16px 8px;
+    text-align: center;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.4rem;
+    font-family: 'Segoe UI', sans-serif;
+    color: white;
+    padding: 8px 16px;
+}
+
+a:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 16px;
+    transition: ease 0.7s;
+}
+
+main, footer {
+    text-align: center;
+    color: white;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+h2 {
+    font-size: 1.5rem;
+}
+
+.titulo_menu {
+    color: rgb(1, 39, 75); 
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 1.4rem; 
+    font-weight: bold;
+}
+
+input, button, select {
+    background-color: black;
+    border-radius: 16px;
+    text-align: center;
+    padding: 8px 4px;
+    color: white;
+    font-family: 'Segoe UI', sans-serif;
+    font-weight: bold;
+    width: 300px;
+    font-size: 1.20rem;
+}
+
+label {
+    font-size: 1.20rem;
+    font-weight: bold;
+}
+
+button {
+    cursor: pointer;
+    background-color: black;
+    color: #095bb9;
+    border: 2px solid white;
+    transition: 0.3s;
+}
+
+.resposta {
+    font-size: 1.20rem;
+    color: white;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+th {
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+th, td {
+    border: 2px solid white;
+    padding: 10px;
+    text-align: center;
+    color: white;
+}

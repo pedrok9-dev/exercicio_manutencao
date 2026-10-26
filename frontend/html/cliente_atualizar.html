@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/cliente_atualizar.js" defer></script>
+    <title>Atualizar Cliente</title>
+</head>
+<body>
+    <header>
+        <nav><a href="../index.html">Home</a></nav>
+        <br><hr><br>
+    </header>
+    <main>
+        <h1>Atualizar Cliente</h1>
+        <form>
+            <label for="id">Código do Cliente</label><br>
+            <input type="number" id="id" required><br><br>
+
+            <label for="nome">Nome</label><br>
+            <input type="text" id="nome"><br><br>
+
+            <label for="email">Email</label><br>
+            <input type="email" id="email"><br><br>
+
+            <label for="senha">Nova Senha</label><br>
+            <input type="password" id="senha"><br><br>
+
+            <label for="cpf">CPF (11 dígitos)</label><br>
+            <input type="text" id="cpf" maxlength="11"><br><br>
+
+            <label for="telefone">telefone</label><br>
+            <input type="text" id="telefone"><br><br>
+
+            <button id="btn_atualizar">Atualizar</button>
+        </form>
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

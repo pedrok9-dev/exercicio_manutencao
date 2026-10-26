@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+      <link rel="stylesheet" href="../css/style_cad.css">
+    <script src="../js/cliente_consultar.js" defer></script>
+    <title>Consultar Ciclista por ID</title>
+</head>
+<body>
+    <header>
+        <nav><a href="../index.html">Home</a></nav>
+        <br><hr><br>
+    </header>
+    <main>
+        <h1>Consultar cliente por Código (ID)</h1><br>
+        <form>
+            <label for="id">Código do Cliente</label><br>
+            <input type="number" id="id" required><br><br>
+
+            <button type="button" id="btn_consultar">Consultar</button>
+        </form>
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

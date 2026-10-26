@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/style.css">
+    <script src="../js/agendamento_atualizar.js" defer></script>
+    <title>Atualizar Agendamento - PixelFix</title>
+</head>
+<body>
+    <header>
+        <nav><a href="../index.html">Home</a></nav>
+        <br><hr><br>
+    </header>
+    <main>
+        <h1>Atualizar Agendamento</h1>
+        <p>Informe o código do agendamento e preencha os campos que deseja alterar.</p>
+        <form>
+            <label for="id">Código do Agendamento</label><br>
+            <input type="number" id="id" min="1" step="1" required><br><br>
+
+            <label for="data">Data</label><br>
+            <input type="date" id="data"><br><br>
+
+            <label for="hora">Horário</label><br>
+            <input type="time" id="hora"><br><br>
+
+            <label for="idCliente">Código do Cliente</label><br>
+            <input type="number" id="idCliente" min="1" step="1"><br><br>
+
+            <label for="idConsole">Código do Console</label><br>
+            <input type="number" id="idConsole" min="1" step="1"><br><br>
+
+            <button id="btn_atualizar">Atualizar</button>
+        </form>
+        <div id="resposta" class="resposta"></div>
+    </main>
+</body>
+</html>

@@ -1,0 +1,105 @@
+### Teste da Rota Raíz
+GET http://localhost:3000/
+Content-Type: application/json
+
+###
+
+### 1. Cadastrar Cliente 
+POST http://localhost:3000/cliente
+Content-Type: application/json
+
+{
+  "nome": "Carlos",
+  "email": "carlos@gmail.com",
+  "senha": "abc",
+  "cpf": "12345678901",
+  "telefone": "4899999999"
+}
+
+####
+###Fazer Login com Marcos (Armazena o token automaticamente)
+
+# @name loginReq
+POST http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "email": "carlos@gmail.com",
+    "senha": "abc"
+}
+
+###
+
+### 2. Listar Clientes
+GET http://localhost:3000/clientes
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+### 2. Consultar Clientes
+GET http://localhost:3000/cliente/1
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+### 2. Listar Clientes
+DELETE  http://localhost:3000/cliente/2
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+
+
+###
+
+### 3. Cadastrar Console
+POST http://localhost:3000/console
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "modelo": "PlayStation 5",
+  "marca": "Sony",
+  "numeroSerie": "2",
+  "tipo": "Mídia Digital",
+  "idCliente": 1
+}
+
+### 2. Listar Consoles
+GET http://localhost:3000/consoles
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+###
+
+### Consultar Console por número de série
+GET http://localhost:3000/console/2
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+###
+
+### 4. Cadastrar Agendamento
+POST http://localhost:3000/agendamento
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "data": "2026-11-10",
+  "hora": "14:30:00",
+  "idCliente": 1,
+  "idConsole": 1
+}
+
+### 2. Listar Agendamentos
+GET http://localhost:3000/agendamentos
+Authorization: {{loginReq.response.body.$.token}}
+Content-Type: application/json
+
+
+### Atualizar Agendamento  
+PUT http://localhost:3000/agendamento/1
+Content-Type: application/json
+Authorization: {{loginReq.response.body.token}}
+
+{
+    "data": "2026-10-30",
+    "hora": "15:30:00"
+}
